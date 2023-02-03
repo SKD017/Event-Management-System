@@ -1,0 +1,24 @@
+<h3>Event Management System </h3>
+<p><a href="/addUser" class="addbtn" >Add User</a></p>
+<table>
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Event</td>
+            <td>Date</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+   <tbody>
+    {{#each rows}}
+        <tr>
+            <td>{{this.ID}}</td>
+            <td>{{this.EVENT}}</td>
+            <td>{{this.DATE}}</td>
+            <td><a class="edit" href="/editUser/{{this.ID}}">Edit</a></td>
+            <td><a onclick="return confirm('Are you sure, you want to delete?')" class="delete" href="/deleteUser/{{this.ID}}">Delete</a></td>
+        </tr>
+    {{/each}}
+   </tbody>
+</table>
